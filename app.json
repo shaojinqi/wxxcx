@@ -1,0 +1,63 @@
+{
+  "pages":[
+    "pages/pay/index",
+    "pages/collect/index",
+    "pages/index/index",
+    "pages/search/index",
+    "pages/category/index",
+    "pages/goods_list/index",
+    "pages/goods_detail/index",
+    "pages/cart/index",
+   
+    "pages/order/index",
+    "pages/user/index",
+    "pages/feedback/index",
+    "pages/login/index",
+    "pages/auth/index",
+    
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ff0000",
+    "navigationBarTitleText": "乐淘",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "color":"#999",
+    "selectedColor":"#ff2d4a",
+    "backgroundColor": "#fafafa",
+    "borderStyle": "black",
+    "list":[
+      {
+        "pagePath":"pages/index/index",
+        "text": "乐淘首页",
+        "iconPath":"./icon/home.png",
+      "selectedIconPath": "./icon/3.png" 
+      },
+      {
+        "pagePath":"pages/category/index",
+        "text": "分类",
+        "iconPath": "./icon/category.png",
+      "selectedIconPath": "./icon/2.png"
+      },
+      {
+        "pagePath":"pages/cart/index",
+        "text": "购物车",
+        "iconPath": "./icon/cart.png",
+      "selectedIconPath": "./icon/1.png"
+      },
+       {
+        "pagePath":"pages/user/index",
+        "text": "我的",
+        "iconPath": "./icon/my.png",
+      "selectedIconPath": "./icon/4.png"
+      }
+    ]
+  },
+
+
+
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

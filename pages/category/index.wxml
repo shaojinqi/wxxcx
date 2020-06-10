@@ -1,0 +1,81 @@
+<!--pages/category/index.wxml-->
+<!-- <text>pages/category/index.wxml</text> -->
+<SearchInput></SearchInput>
+
+<view class="container">
+	<view class="page-body">
+		<view class="page-section">
+			<view class="page-section-spacing">
+				<scroll-view
+				 scroll-y="true"
+				 style="height: 900rpx;"
+				 bindscrolltoupper="upper"
+				 bindscrolltolower="lower"
+				 bindscroll="scroll"
+				 scroll-into-view="{{toView}}"
+				 scroll-top="{{scrollTop}}"
+				>
+					<view
+					 id="demo1"
+					 data-index="{{index}}"
+					 class="scroll-view-item demo-text-1 {{currentIndex===index? 'active':''}}"
+					 wx:for="{{leftMenuList}}"
+					 wx:key="*this"
+					 bindtap='handlerChangeItem'
+					>{{item}}
+					</view>
+				</scroll-view>
+			</view>
+			<!-- 左侧滚动结束 -->
+
+			<view class="page-section-spacing2">
+				<scroll-view
+				 scroll-y="true"
+				 style="height: 900rpx;"
+				 bindscrolltoupper="upper"
+				 bindscrolltolower="lower"
+				 bindscroll="scroll"
+				 scroll-into-view="{{toView}}"
+				 scroll-top="{{scrollTop}}"
+				> 
+					<view
+					 id="demo1"
+					  wx:for="{{rightMenuList}}"
+					 wx:for-index="index1"
+					wx:for-item="item1" wx:key="cat_name">
+					<!--/* 标题 */-->
+						<view class="goods_title">
+							<text class="deltirmer">/</text>
+                     <text class="goods_title_name">{{item1.cat_name}}</text>
+                        <text class="deltirmer">/</text>
+						</view>
+						
+
+	                        <!--/* 下半部分 */-->
+						<view class="goods_content">
+								<navigator 
+								url="/pages/goods_list/index?cid={{item2.cat_id}}"
+								wx:for="{{item1.children}}"
+						         wx:for-index="index2"
+					         	  wx:for-item="item2"
+						          wx:key="cat_icon">
+										<image mode="widthFix" src="{{item2.cat_icon}}" />
+										  <view>
+											  {{item2.cat_name}}
+										  </view>
+											
+									</navigator>
+						</view>
+						
+					</view>
+
+				</scroll-view>
+			</view>
+     <!-- 右侧 -->
+			
+		</view>
+
+	</view>
+	<!-- 包裹 -->
+</view>
+

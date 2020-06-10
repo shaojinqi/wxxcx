@@ -1,0 +1,22 @@
+/* pages/goods_list/index.wxss */
+
+.goods_content_list{
+    display: flex;
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 5px;
+    padding-bottom: 5px ;
+}
+.leftList {
+
+}
+.leftList .img{
+    width: 100px;
+}
+.rightList{
+    font-size: 28rpx;
+    margin-left: 15px;
+    padding-left: 15px;
+}
+.rightList .ys{
+    color: red;
+}

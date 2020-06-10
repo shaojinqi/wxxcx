@@ -1,0 +1,71 @@
+<!--pages/pay/index.wxml-->
+<text>pages/pay/index.wxml</text>
+
+<view>
+    	<!-- 用户收货地址 -->
+<block>
+<view class="address_info_wrap">
+ <view class="info_wrap"> 
+	<view class="addressName">
+		{{address.userName}}
+	</view>
+	<view class="addressAll">
+		{{address.all}}
+		
+	</view>
+	</view>
+	  
+	
+	<view class="addressPhone">
+		{{address.telNumber}}
+	</view>
+	  
+	  
+</view>
+  </block>
+
+
+  	<!-- 商品 -->
+<view class="content_list">
+<text class="topText" selectable="false" space="false" decode="false">
+    购物车
+</text>
+ 
+        <navigator
+        hover-class="none"
+		 class="goods_content_list"
+		 target=""
+		 url="/pages/goods_detail/index?goods_id={{item.goods_id}}"
+		 open-type="navigate"
+		 wx:for="{{cart}}"
+        >
+			<!-- 左边 -->
+			<view class="leftList">
+				<image
+				 class="img"
+				 src="{{item.goods_small_logo?item.goods_small_logo:'https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg'}}"
+				 mode="widthFix"
+				/>
+			</view>
+
+			<!-- 右边 -->
+			<view class="rightList">
+				<text class="rightText" >
+                      {{item.goods_name}}
+                  </text>
+				<view class="rigthSub">
+					<view class="ys" >
+                     ￥{{item.goods_price}}
+                  </view>
+                    <view class="btnadd">
+					<text class="add" catchtap="minusCount" data-id="{{item.goods_id}}">-</text>
+					<text class="text">{{item.num}}</text>
+					<text class="add" catchtap="addCount" data-id="{{item.goods_id}}">+</text>
+                    </view>
+				</view>
+			</view>
+		</navigator>
+
+	</view>
+</view>
+  

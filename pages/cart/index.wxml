@@ -1,0 +1,112 @@
+<!--pages/cart/index.wxml-->
+
+<view class="addAdrress_container">
+	<block>
+	<view class="address_item">
+		<button
+		 type="primary"
+		 plain="true"
+		 bindtap="handlerAddress"
+		>添加用户收货地址
+		</button>
+	</view>
+	</block>
+
+	<!-- 用户收货地址 -->
+<block>
+<view class="address_info_wrap">
+ <view class="info_wrap"> 
+	<view class="addressName">
+		{{address.userName}}
+	</view>
+	<view class="addressAll">
+		{{address.all}}
+		
+	</view>
+	</view>
+	  
+	
+	<view class="addressPhone">
+		{{address.telNumber}}
+	</view>
+	  
+	  
+</view>
+  </block>
+
+
+
+
+
+	<!-- 商品 -->
+<view class="content_list">
+<text class="topText" selectable="false" space="false" decode="false">
+    优购生活馆
+</text>
+ 
+        <navigator
+        hover-class="none"
+		 class="goods_content_list"
+		 target=""
+		 url="/pages/goods_detail/index?goods_id={{item.goods_id}}"
+		 open-type="navigate"
+		 wx:for="{{cart}}"
+        >
+      <view class="radios">
+      <radio catchtap='radio' data-id="{{item.cat_id}}"  value="{{item.cat_id}}" checked="{{item.isCheck}}"/>
+      </view>
+			<!-- 左边 -->
+			<view class="leftList">
+				<image
+				 class="img"
+				 src="{{item.goods_small_logo?item.goods_small_logo:'https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg'}}"
+				 mode="widthFix"
+				/>
+			</view>
+
+			<!-- 右边 -->
+			<view class="rightList">
+				<text class="rightText" >
+                      {{item.goods_name}}
+                  </text>
+				<view class="rigthSub">
+					<view class="ys" >
+                     ￥{{item.goods_price}}
+                  </view>
+                    <view class="btnadd">
+					<text class="add" catchtap="minusCount" data-id="{{item.goods_id}}">-</text>
+					<text class="text">{{item.num}}</text>
+					<text class="add" catchtap="addCount" data-id="{{item.goods_id}}">+</text>
+                    </view>
+				</view>
+			</view>
+		</navigator>
+
+	</view>
+   
+   <button class="btn" bindtap="removeAll" hidden="{{yincang}}" type="warn">全部清空</button>
+	<!-- 底部 -->
+	<view class="foot_content">
+	<view class="foot">
+		<view class="radios">
+       <radio catchtap='allRadio'  value="aa" checked="{{allChecked}}"/>全选
+      </view>
+
+		<view class="footcon">
+		合计
+			<view class="ys">
+				￥{{totalPirce}}
+			</view>
+		</view>
+
+		  <view class="footbtn">
+			   <button style="width: 40vw;" plain="true" bindtap='handlePay'>结算:({{totalNum}})</button>
+		  </view>
+			
+
+	</view>
+	  
+</view>
+
+</view>
+

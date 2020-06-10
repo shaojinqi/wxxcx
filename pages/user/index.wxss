@@ -1,0 +1,39 @@
+/* pages/user/index.wxss */
+page{
+    background-color: rgb(236, 236, 236);
+}
+.user_content{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.user_content_item{
+    display: flex;
+    background-color: #fff;
+    text-align: center;
+    padding: 0 10px;
+    justify-content: space-between;
+    width: 96vw;
+    margin-bottom: 5px;
+    padding-top: 5px;
+}
+.ys{
+    color: red;
+}
+
+/* 订单 */
+.item2_top{
+    background-color: #fff;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 6px;
+    border-bottom:1px solid rgb(216, 216, 216);
+}
+.item2_bottom{
+    background-color: #fff;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 6px;
+    border-bottom:1px solid rgb(216, 216, 216);
+}

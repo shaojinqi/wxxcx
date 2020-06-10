@@ -1,0 +1,21 @@
+<!--pages/search/index.wxml-->
+<view class="seach-container">
+    <view class="top-search">
+        <input bindinput='handlerInput' value="{{inputVal}}" placeholder="要搜索的商品">
+            
+        </input>
+          <button bindtap='handlerTap' size="mini" hidden="{{isShow}}">取消</button>
+    </view>
+      <view class="search-list">
+          <navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}" 
+          open-type="navigate" wx:for="{{searchList}}">
+              <view class="lists">
+                 {{item.goods_name}}
+              </view>
+                
+          </navigator>
+            
+      </view>
+        
+</view>
+  

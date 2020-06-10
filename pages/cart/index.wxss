@@ -1,0 +1,130 @@
+/* pages/cart/index.wxss */
+
+.addAdrress_container{
+    margin:10rpx;
+}
+.address_item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.address_item button{
+ font-size: 26rpx;   
+ width: 60%;
+}
+/*  */
+.address_info_wrap{
+    display: flex;
+    margin: 10px;
+}
+.info_wrap{
+    flex: 3;
+}
+.addressName{
+
+}
+.addressAll{
+
+}
+.addressPhone{
+    float: 2;
+    text-align: right;
+}
+
+
+
+.add{
+    display: inline-block;
+    padding:0 12px;
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: rgb(226, 226, 226);
+}
+.text{
+   padding: 0 5px;
+}
+/* 内容 */
+.content_list{
+    margin-bottom: 80px;
+}
+.goods_content_list{
+    display: flex;
+    padding-top: 15px;
+    margin-bottom: 5px;
+    padding-bottom: 5px ;
+    border-bottom: 1px solid #aaa;
+}
+.radios{
+   display: flex;
+   align-items: center;
+}
+.radios radio{
+    transform:scale(0.7); 
+}
+.topText{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.leftList .img{
+    width: 100px;
+}
+
+.rightList{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 28rpx;
+    margin-left: 15px;
+    padding-left: 15px;
+    overflow: hidden;
+}
+.rightText{
+    margin-top: -20px;
+    font-size: 12px;
+}
+.rigthSub{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+    margin-right: 14px;
+}
+ .ys{
+    color: red;
+}
+.btnadd{
+    margin-right: 14px;
+}
+
+/* 底部 */
+.foot_content{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background-color: #fff;
+}
+.foot{
+    display: flex;
+    justify-content: space-between;
+}
+.footcon{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footbtn{
+    /* flex: 2; */
+}
+.footbtn button{
+    background-color: red;
+    border-radius: 0;
+    color: #ffffff;
+
+}
+
+.btn{
+    margin-bottom: 60px;
+}

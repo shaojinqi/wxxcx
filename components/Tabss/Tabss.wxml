@@ -1,0 +1,15 @@
+<!--components/Tabss/Tabss.wxml-->
+<view class="tab_container">
+<view class="tabs_title">
+        <view class="tabs_title_item {{item.isActive?'active':''}}" wx:for="{{tabss}}"
+         wx:key="id" bindtap="itemChangeSecletced"
+         data-flag="{{item.id}}">
+            {{item.value}} 
+        </view>
+</view>
+     
+    <view class="tabs_content">
+       <slot></slot>
+    </view>
+      
+</view>

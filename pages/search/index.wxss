@@ -1,0 +1,35 @@
+/* pages/search/index.wxss */
+page{
+  background-color:rgb(243, 243, 243) ;
+}
+input{
+  padding-left: 5px;
+}
+.top-search{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.top-search input{
+    flex: 5;
+    background-color: #fff;
+    border: 2px solid red;
+    height: 30px;
+    margin-right: 5px;
+}
+.top-search button {
+    flex: 1;
+    margin-left: 5px;
+  } 
+.search-list{
+    height: 100vh;
+}
+.search-list navigator{
+    height: 45px;
+}
+  .lists{
+    /* height: 45px; */
+    color: coral;
+  }

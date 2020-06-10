@@ -1,0 +1,59 @@
+<!--pages/collect/index.wxml-->
+<view class="collect_content">
+
+<Tabss tabss="{{tabss}}"  bindfaEvents='changeSelected'>
+<block wx:if="{{tabss[0].isActive}}">
+    <view class="goods_content">
+        <!-- 上面 -->
+        <view class="top">
+        <view class="topBtn1">
+            全部
+        </view>
+          <view class="topBtn">
+            正在热卖
+        </view>
+        <view class="topBtn">
+            即将上线
+        </view>
+    </view>
+
+<!-- 下面 -->
+  <view class="content_bottom">
+                <navigator
+        hover-class="none"
+		 class="goods_content_list"
+		 target=""
+		 url="/pages/goods_detail/index?goods_id={{item.goods_id}}"
+		 open-type="navigate"
+        >
+			<!-- 左边 -->
+			<view class="leftList">
+				<image
+				 class="img"
+				 src="{{item.goods_small_logo?item.goods_small_logo:'https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg'}}"
+				 mode="widthFix"
+				/>
+			</view>
+
+			<!-- 右边 -->
+			<view class="rightList">
+				<text class="rightText" >
+                      {{item.goods_name}}
+                      xxxxxxxxxxxxxxxxx
+                      xxxxxxxxxxxxxxx
+                  </text>
+				<view class="rigthSub">
+					<view class="ys" >
+                     ￥{{item.goods_price}}
+                  </view>
+				</view>
+			</view>
+		</navigator>
+          </view>
+
+    </view>
+</block>
+</Tabss>
+       
+</view>
+  
