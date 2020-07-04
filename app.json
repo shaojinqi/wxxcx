@@ -1,8 +1,9 @@
 {
   "pages":[
+    "pages/index/index",
     "pages/pay/index",
     "pages/collect/index",
-    "pages/index/index",
+   
     "pages/search/index",
     "pages/category/index",
     "pages/goods_list/index",
